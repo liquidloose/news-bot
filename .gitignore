@@ -1,0 +1,34 @@
+# --- Agency Secrets & Credentials ---
+.env
+auth.json
+secrets.json
+
+# --- Dependencies ---
+node_modules/
+package-lock.json
+
+# --- IDE Junk ---
+.cursor/**/*
+
+# --- OpenClaw Logic: The "Negative Ignore" Strategy ---
+# 1. Ignore everything in the hidden folder first
+.openclaw/**/*
+
+# 2. Force Git to look ONLY at your personality/config files
+! .openclaw/workspace/
+! .openclaw/workspace/**/*.md
+! .openclaw/workspace/**/*.txt
+! .openclaw/openclaw.json
+! .openclaw/cron/**/*
+
+# 3. Explicitly re-block the high-volume/private bloat inside workspace
+.openclaw/workspace/sessions/
+.openclaw/workspace/logs/
+.openclaw/workspace/cache/
+.openclaw/workspace/temp/
+.openclaw/workspace/media/
+
+# --- Local Project Files ---
+logs/
+*.log
+media/
