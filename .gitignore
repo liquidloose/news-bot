@@ -13,6 +13,7 @@ package-lock.json
 # --- OpenClaw Logic: The "Negative Ignore" Strategy ---
 # 1. Ignore everything in the hidden folder first
 .openclaw/**/*
+.config/**/*
 
 # 2. Force Git to look ONLY at your personality/config files
 ! .openclaw/workspace/
