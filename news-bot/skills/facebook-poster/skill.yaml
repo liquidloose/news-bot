@@ -1,0 +1,12 @@
+name: post_to_facebook
+description: "Posts an update to a client's Facebook page using their nickname."
+parameters:
+  type: object
+  properties:
+    clientNickname:
+      type: string
+      description: "The nickname of the client (e.g., 'fall-river-mirror' or 'other-client')."
+    message:
+      type: string
+      description: "The text to post."
+  required: ["clientNickname", "message"]
